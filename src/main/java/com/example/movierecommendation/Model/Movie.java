@@ -22,6 +22,4 @@ public class Movie {
     private int releaseYear;
     private String description;
 
-  //  public Movie(String theDarkKnight, String action, int i, String s) {
-   // }
 }

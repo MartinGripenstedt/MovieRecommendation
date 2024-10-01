@@ -22,7 +22,6 @@ public class MovieController {
     }
 
 
-
     @GetMapping("/add")
     public String showAddForm(Model model) {
         model.addAttribute("movie", new Movie());

@@ -13,10 +13,6 @@ public class MovieService {
     @Autowired
     private MovieRepository movieRepository;
 
-    public List<Movie> getAllMovies() {
-        return movieRepository.findAll();
-    }
-
     public Movie getRandomMovie() {
         List<Movie> movies = movieRepository.findAll();
         if (movies.isEmpty()) {
