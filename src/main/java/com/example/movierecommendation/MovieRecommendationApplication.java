@@ -19,6 +19,7 @@ public class MovieRecommendationApplication {
 	@Bean
 	CommandLineRunner commandLineRunner() {
 		return args -> {
+
 			movieSeeder.seedMovies();
 		};
 	}
