@@ -15,7 +15,7 @@ public class MovieSeeder {
     public void seedMovies() {
         List<Movie> movies = List.of(
                 new Movie(1L,"Inception", "Sci-Fi", 2010, "A thief who steals corporate secrets using dream-sharing technology."),
-                new Movie(2L,"The Dark Knight", "Action", 2008, "Batman sets out to dismantle the remaining criminal organizations in Gotham."),
+                new Movie(2L,"The Dark Knight TESTING DEPLOY", "Action", 2008, "Batman sets out to dismantle the remaining criminal organizations in Gotham."),
                 new Movie(3L,"Interstellar", "Sci-Fi", 2014, "A group of astronauts travel through a wormhole in search of a new home for humanity."),
                 new Movie(4L,"The Matrix", "Sci-Fi", 1999, "A computer hacker learns about the true nature of reality and his role in the war against its controllers."),
                 new Movie(5L,"Pulp Fiction", "Crime", 1994, "The lives of two mob hitmen, a boxer, and a pair of bandits intertwine.")
