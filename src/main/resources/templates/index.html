@@ -7,15 +7,48 @@
 
 </head>
 <body>
-<h1>Movie :  </h1>
-<div th:if="${movie != null}">
-    <h2 th:text="${movie.title}">Movie Title</h2>
-    <p><strong>Genre:</strong> <span th:text="${movie.genre}">Genre</span></p>
-    <p><strong>Release Year:</strong> <span th:text="${movie.releaseYear}">Year</span></p>
-    <p><strong>Description:</strong> <span th:text="${movie.description}">Description</span></p>
-</div>
-<div th:if="${movie == null}">
-    <p>No movies available. Please add some!</p>
+
+<div class="container">
+
+    <form action="/random-movie" method="get">
+        <button type="submit">Generate Random Movie</button>
+    </form>
+
+    <div class="movie-details" th:if="${movie != null}">
+        <h1>Movie:</h1>
+        <h2 th:text="${movie.title}">Movie Title</h2>
+        <p><strong>Genre:</strong> <span th:text="${movie.genre}">Genre</span></p>
+        <p><strong>Release Year:</strong> <span th:text="${movie.releaseYear}">Year</span></p>
+        <p><strong>Description:</strong> <span th:text="${movie.description}">Description</span></p>
+    </div>
+
+    <div class="movie-details" th:if="${movie == null}">
+        <h1>Movie:</h1>
+        <p>No movies available. Please add some!</p>
+    </div>
+
+    <div class="add-movie-form">
+        <form th:action="@{/add}" th:object="${newMovie}" method="post">
+            <div>
+                <label>Title:</label>
+                <input type="text" th:field="*{title}" required />
+            </div>
+            <div>
+                <label>Genre:</label>
+                <input type="text" th:field="*{genre}" required />
+            </div>
+            <div>
+                <label>Release Year:</label>
+                <input type="number" th:field="*{releaseYear}" required />
+            </div>
+            <div>
+                <label>Description:</label>
+                <textarea th:field="*{description}" required></textarea>
+            </div>
+            <button type="submit">Add Movie</button>
+        </form>
+    </div>
+
 </div>
 
 </body>
